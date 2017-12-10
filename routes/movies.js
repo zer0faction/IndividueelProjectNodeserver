@@ -12,6 +12,15 @@ routes.get('/', function (req,res,next) {
         .catch(next);
 })
 
+routes.get('/:id',function (req,res,next) {
+    const id = req.params.id;
+    Movie.findOne({_id: id})
+        .then((movie) => {
+            res.status(200).json(movie);
+        })
+        .catch(next);
+})
+
 routes.post('/', function (req,res,next) {
     const movieReq = req.body;
     Movie.create(movieReq)
