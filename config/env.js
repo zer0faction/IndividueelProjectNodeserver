@@ -1,9 +1,9 @@
 var env = {
     webPort: process.env.PORT || 4200,
-    dbHost: process.env.DB_HOST || 'localhost',
-    dbPort: process.env.DB_PORT || '',
-    dbUser: process.env.DB_USER || '',
-    dbPassword: process.env.DB_PASSWORD || '',
+    dbHost: process.env.DB_HOST || 'ds135186.mlab.com',
+    dbPort: process.env.DB_PORT || '35186',
+    dbUser: process.env.DB_USER || 'Erin',
+    dbPassword: process.env.DB_PASSWORD || 'test',
     dbDatabase: process.env.DB_DATABASE || 'movies'
 }
 
@@ -16,3 +16,5 @@ module.exports = {
     dburl: dburl,
     'secret':'geheimpie'
 };
+
+//mongodb://<dbuser>:<dbpassword>@ds135186.mlab.com:35186/movies
