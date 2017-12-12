@@ -48,7 +48,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(config.env.webPort, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log('De server luistert op port ' + app.get('port'));
 });
 
